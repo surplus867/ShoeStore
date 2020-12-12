@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.udacity.shoestore.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_WelcomeFragment"
+            app:destination="@id/WelcomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/WelcomeFragment"
+        android:name="com.udacity.shoestore.WelcomeFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_welcome" />
+</navigation>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+    <variable
+        name="fragment"
+        type="com.udacity.shoestore.TitleFragment"/>
+</data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TitleFragment">
+
+    <TextView
+        android:id="@+id/login"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.241"/>
+
+    <EditText
+        android:id="@+id/emailAddress_ed"
+        style="@style/TextStyle"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:autofillHints=""
+        android:text="@string/email"
+        android:hint="@string/email_address"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/login"
+        app:layout_constraintStart_toStartOf="@+id/login"
+        app:layout_constraintTop_toBottomOf="@+id/login"/>
+
+
+    <EditText
+        android:id="@+id/password_ed"
+        style="@style/TextStyle"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:autofillHints=""
+        android:text="@string/email"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/emailAddress_ed"
+        app:layout_constraintStart_toStartOf="@+id/emailAddress_ed"
+        app:layout_constraintTop_toBottomOf="@+id/emailAddress_ed"/>
+
+    <Button
+        android:id="@+id/log_in_button"
+        android:onClick="@{() -> fragment.testClick()}"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="@+id/password_ed"
+        app:layout_constraintStart_toStartOf="@+id/password_ed"
+        app:layout_constraintTop_toBottomOf="@+id/password_ed" />
+
+    <Button
+        android:id="@+id/sign_up_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/sign_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/log_in_button"
+        app:layout_constraintStart_toStartOf="@+id/log_in_button"
+        app:layout_constraintTop_toBottomOf="@+id/log_in_button"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
