@@ -8,4 +8,7 @@
     <string name="email_address">email address</string>
     <string name="password">password</string>
     <string name="sign_up">Sign up</string>
+    <string name="please_click_the_button_below">Please click the button below</string>
+    <string name="welcome_to_my_app">Welcome to My App</string>
+    <string name="next">next</string>
 </resources>

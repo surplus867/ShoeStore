@@ -12,12 +12,21 @@
         tools:layout="@layout/fragment_title" >
         <action
             android:id="@+id/action_titleFragment_to_WelcomeFragment"
-            app:destination="@id/WelcomeFragment" />
+            app:destination="@id/welcomeFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/WelcomeFragment"
-        android:name="com.udacity.shoestore.WelcomeFragment"
+        android:id="@+id/welcomeFragment"
+        android:name="com.udacity.shoestore.welcome.WelcomeFragment"
         android:label="fragment_title"
-        tools:layout="@layout/fragment_welcome" />
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_instructionFragment"
+            app:destination="@id/instructionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/instructionFragment"
+        android:name="com.udacity.shoestore.InstructionFragment"
+        android:label="instruction_fragment"
+        tools:layout="@layout/fragment_instruction" />
 </navigation>

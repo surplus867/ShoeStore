@@ -2,8 +2,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
     <variable
-        name="fragment"
-        type="com.udacity.shoestore.TitleFragment"/>
+        name="viewModel"
+        type="com.udacity.shoestore.TitleViewModel"/>
+
 </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,7 +34,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:autofillHints=""
-        android:text="@string/email"
+        android:text="@={viewModel.username}"
         android:hint="@string/email_address"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="@+id/login"
@@ -48,7 +49,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:autofillHints=""
-        android:text="@string/password"
+        android:text="@={viewModel.password}"
         android:hint="@string/password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/emailAddress_ed"
@@ -57,7 +58,7 @@
 
     <Button
         android:id="@+id/log_in_button"
-        android:onClick="@{() -> fragment.testClick()}"
+        android:onClick="@{() -> viewModel.testClick()}"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="213dp"
         android:layout_height="wrap_content"
@@ -72,7 +73,7 @@
 
     <Button
         android:id="@+id/sign_up_button"
-        android:onClick="@{() -> fragment.testClick()}"
+        android:onClick="@{() -> viewModel.testClick()}"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="213dp"
         android:layout_height="wrap_content"
