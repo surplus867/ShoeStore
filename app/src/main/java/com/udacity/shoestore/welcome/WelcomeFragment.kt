@@ -36,7 +36,7 @@ class WelcomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding: FragmentTitleBinding =
                 DataBindingUtil.inflate(inflater, R.layout.fragment_welcome, container, false)
-        binding.viewModel = viewModel
+        binding.viewModel = viewModel // Error
         return binding.root
 
 
