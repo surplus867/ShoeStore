@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentTitleBinding
+import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {
 
@@ -34,7 +35,7 @@ class WelcomeFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding: FragmentTitleBinding =
+        val binding: FragmentWelcomeBinding =
                 DataBindingUtil.inflate(inflater, R.layout.fragment_welcome, container, false)
         binding.viewModel = viewModel // Error
         return binding.root
@@ -42,3 +43,6 @@ class WelcomeFragment : Fragment() {
 
     }
 }
+
+//java.lang.IllegalArgumentException: Navigation action/destination com.udacity.shoestore:id/action_titleFragment_to_WelcomeFragment cannot be found from the current destination Destination(com.udacity.shoestore:id/welcome_destination)
+// label=fragment_welcome class=com.udacity.shoestore.welcome.WelcomeFragment

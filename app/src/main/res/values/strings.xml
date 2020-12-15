@@ -11,4 +11,5 @@
     <string name="please_click_the_button_below">Please click the button below</string>
     <string name="welcome_to_my_app">Welcome to My App</string>
     <string name="next">next</string>
+    <string name="instruction">Instruction</string>
 </resources>
