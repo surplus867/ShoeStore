@@ -1,4 +1,4 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.title
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,10 +9,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentTitleBinding
-import kotlinx.android.synthetic.main.fragment_title.*
 
 
 // TODO: Rename parameter arguments, choose names that match

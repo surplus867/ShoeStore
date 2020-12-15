@@ -1,13 +1,9 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.title
 
-import android.widget.Toast
 import androidx.databinding.ObservableField
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.navigation.fragment.NavHostFragment.findNavController
-import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.fragment_title.*
 
 class TitleViewModel : ViewModel() {
 

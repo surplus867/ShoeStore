@@ -4,15 +4,17 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
     <data>
+    <variable
+        name="viewModel"
+        type="com.udacity.shoestore.shoeslist.ShoesListViewModel" />
 
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ShoesListFragment">
+        tools:context=".shoeslist.ShoesListFragment">
 
 
         <ScrollView
@@ -34,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:clickable="true"
+                android:clickable="@{() -> viewModel.testClick()}"
                 android:contentDescription="@string/fab_description"
                 android:focusable="true"
                 android:src="@drawable/ic_add"
