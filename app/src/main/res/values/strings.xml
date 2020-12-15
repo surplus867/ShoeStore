@@ -12,4 +12,5 @@
     <string name="welcome_to_my_app">Welcome to My App</string>
     <string name="next">next</string>
     <string name="instruction">Instruction</string>
+    <string name="fab_description">fab description</string>
 </resources>

@@ -24,7 +24,7 @@ class WelcomeFragment : Fragment() {
 
         // Observing the navigate event, call in the textClick function
         viewModel.navigate.observe(this, Observer {
-            findNavController().navigate(R.id.action_titleFragment_to_WelcomeFragment)
+            findNavController().navigate(R.id.action_welcomeFragment_to_instructionFragment)
         })
 
     }
