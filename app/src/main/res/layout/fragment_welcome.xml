@@ -6,24 +6,20 @@
     <data>
         <variable
             name="viewModel"
-            type="com.udacity.shoestore.welcome.WelcomeViewModel"/>
+            type="viewModel.ShareViewModel"/>
 
 
     </data>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:context=".welcome.WelcomeFragment">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp">
+            android:layout_height="wrap_content">
 
 
             <TextView
@@ -33,15 +29,15 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="8dp"
                 android:text="@string/welcome_to_my_app"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.44" />
+                app:layout_constraintVertical_bias="0.161" />
 
             <TextView
                 android:id="@+id/click_tv"
@@ -67,14 +63,14 @@
                 android:layout_marginTop="48dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
-                android:onClick="@{() -> viewModel.testClick()}"
+                android:onClick="@{() -> viewModel.instructionNavigation()}"
                 android:text="@string/next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/click_tv"
-                app:layout_constraintHorizontal_bias="0.244"
+                app:layout_constraintHorizontal_bias="0.292"
                 app:layout_constraintStart_toStartOf="@+id/click_tv"
                 app:layout_constraintTop_toBottomOf="@+id/click_tv"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="0.221" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

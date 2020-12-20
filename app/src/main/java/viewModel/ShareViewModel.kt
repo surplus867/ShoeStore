@@ -1,4 +1,4 @@
-package com.udacity.shoestore.shoeslist
+package viewModel
 
 import android.util.Log
 import androidx.databinding.ObservableField
@@ -9,6 +9,8 @@ import com.udacity.shoestore.models.Shoe
 
 class ShareViewModel : ViewModel() {
     // Observables
+    var username = ObservableField<String>("")
+    var password = ObservableField<String>("")
     var shoes = ObservableField<String>("")
     var shoename = ObservableField<String>("")
     var company = ObservableField<String>("")
@@ -19,36 +21,60 @@ class ShareViewModel : ViewModel() {
     var toastItem = MutableLiveData<String>()
     val showToast: LiveData<String> get() = toastItem
     // Navigation event to show navigation
+    var welcomeNavigationItem = MutableLiveData<String>()
+    val welcomeNavigate: LiveData<String> get() = welcomeNavigationItem
+    var instructionNavigationItem = MutableLiveData<String>()
+    val instructionNavigate: LiveData<String> get() = instructionNavigationItem
     var shoeListNavigationItem = MutableLiveData<String>()
     val shoeListNavigate: LiveData<String> get() = shoeListNavigationItem
     var shoeDetailNavigationItem = MutableLiveData<String>()
     val shoeDetailNavigate: LiveData<String> get() = shoeDetailNavigationItem
+    var shoeListBackNavigationItem = MutableLiveData<String>()
+    val shoeListBackNavigate: LiveData<String> get() = shoeListBackNavigationItem
+
+    // log-in Screen to Welcome Screen
+    fun submitLogIn() {
+        // if the username is empty, fire a toast event
+        if(username.get().orEmpty() != "Bilbo" && password.get().orEmpty() != "Bilbo"){
+            toastItem.value = " Please enter the correct email and password"
+        // or else, fire a event to the WelcomeScreen
+        }else{
+            welcomeNavigationItem.value = ""
+        }
+    }
+    // Welcome Screen to Instruction Screen
+    fun instructionNavigation() {
+        instructionNavigationItem.value = ""
+    }
+    // Instruction Screen to Shoe-List Screen
+    fun shoeListNavigation() {
+        shoeListNavigationItem.value = ""
+    }
+    // Shoe-List Screen to Shoe-Detail Screen
+    fun shoeDetailNavigation() {
+        shoeDetailNavigationItem.value = ""
+
+    }
 
     //TODO name correctly ex.  submitShoe()
-    fun testClick() {
+    fun submitShoe() {
         Log.d("Bilbo", "ShoeName: ${shoename.get().orEmpty()}")
         val shoe = Shoe(shoename.get().orEmpty(),shoesize.get()?.toDouble() ?: 0.0,company.get().orEmpty(),description.get().orEmpty())
         shoeList.get()?.add(shoe)
         shoes.set("Name: ${shoename.get().orEmpty()} Company: ${company.get().orEmpty()}")
         // navigate to list after save
-        shoeDetailNavigationItem.value = ""
+        shoeListBackNavigationItem.value = ""
+        //shoeDetailNavigationItem.value = ""
     }
 
-    fun testClick2() {
+    fun backShoeList() {
         // navigate back to shoeList
-        shoeDetailNavigationItem.value = ""
-    }
-    // example to start
-    fun shoeListNavigation() {
-        shoeListNavigationItem.value = ""
+        shoeListBackNavigationItem.value = ""
+        //shoeDetailNavigationItem.value = ""
     }
 
     fun showShoeList() {
         Log.d("bilbo","Name: ${shoeList.get()?.first()?.name.orEmpty()} Company: ${shoeList.get()?.first()?.company.orEmpty()}")
-
-        //shoeList.get()?.forEach{
-          //  shoes.set("${it.name} ${it.company}")
-       // }
 
     }
 }

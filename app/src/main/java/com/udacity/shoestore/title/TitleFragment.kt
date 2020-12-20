@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentTitleBinding
+import viewModel.ShareViewModel
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -19,9 +20,8 @@ import com.udacity.shoestore.databinding.FragmentTitleBinding
 
 class TitleFragment : Fragment() {
 
-   //private var viewModel = ViewModelProvider(this, viewModel).get(TitleViewModel::class.java)
 
-    private val viewModel: TitleViewModel by viewModels()
+    private val viewModel: ShareViewModel by activityViewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +31,7 @@ class TitleFragment : Fragment() {
             Toast.makeText(context, message , Toast.LENGTH_SHORT).show()
         })
         // Observing the navigate event, call in the textClick function
-        viewModel.navigate.observe(this, Observer {
+        viewModel.welcomeNavigate.observe(this, Observer {
             findNavController().navigate(R.id.action_titleFragment_to_welcomeFragment)
         })
 
@@ -47,9 +47,6 @@ class TitleFragment : Fragment() {
         binding.viewModel = viewModel
         return binding.root
 
-
     }
-
-
 
 }

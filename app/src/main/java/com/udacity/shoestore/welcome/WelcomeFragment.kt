@@ -6,24 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.viewModels
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
-import com.udacity.shoestore.databinding.FragmentTitleBinding
 import com.udacity.shoestore.databinding.FragmentWelcomeBinding
+import viewModel.ShareViewModel
 
 class WelcomeFragment : Fragment() {
 
 
-    private val viewModel: WelcomeViewModel by viewModels()
+    private val viewModel: ShareViewModel by activityViewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // Observing the navigate event, call in the textClick function
-        viewModel.navigate.observe(this, Observer {
+        viewModel.instructionNavigate.observe(this, Observer {
             findNavController().navigate(R.id.action_welcomeFragment_to_instructionFragment)
         })
 
@@ -43,6 +43,3 @@ class WelcomeFragment : Fragment() {
 
     }
 }
-
-//java.lang.IllegalArgumentException: Navigation action/destination com.udacity.shoestore:id/action_titleFragment_to_WelcomeFragment cannot be found from the current destination Destination(com.udacity.shoestore:id/welcome_destination)
-// label=fragment_welcome class=com.udacity.shoestore.welcome.WelcomeFragment

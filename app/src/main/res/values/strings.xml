@@ -13,4 +13,17 @@
     <string name="next">next</string>
     <string name="instruction">Instruction</string>
     <string name="fab_description">fab description</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="shoe_name_hint">Shoe Name Hint</string>
+    <string name="company_text">Company Text</string>
+    <string name="company_text_hint">Company Text Hint</string>
+    <string name="shoe_size_text">Shoe Size Text</string>
+    <string name="shoe_size_hint">Shoe Size Hint</string>
+    <string name="shoe_name_text">Shoe Name Text</string>
+    <string name="description_text">Description Text</string>
+    <string name="description_hint">Description Hint</string>
+    <string name="cancel_button_text">Cancel Button Text</string>
+    <string name="cancel_button">Cancel Button</string>
+    <string name="save_button">Save Button</string>
+    <string name="shoe_list">Shoe List</string>
 </resources>
