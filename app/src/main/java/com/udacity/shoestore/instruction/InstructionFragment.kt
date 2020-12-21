@@ -11,7 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentInstructionBinding
-import viewModel.ShareViewModel
+import com.udacity.shoestore.ShareViewModel
 
 class InstructionFragment : Fragment() {
 

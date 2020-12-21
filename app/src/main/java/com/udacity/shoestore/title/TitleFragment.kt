@@ -12,7 +12,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentTitleBinding
-import viewModel.ShareViewModel
+import com.udacity.shoestore.ShareViewModel
 
 
 // TODO: Rename parameter arguments, choose names that match

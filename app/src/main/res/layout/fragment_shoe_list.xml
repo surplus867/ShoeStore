@@ -7,7 +7,9 @@
 
     <variable
         name="viewModel"
-        type="viewModel.ShareViewModel" />
+        type="com.udacity.shoestore.ShareViewModel" />
+
+
 
     </data>
 
@@ -46,8 +48,9 @@
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/shoe_list"
+                android:layout_marginTop="64dp"
+                android:text="@{viewModel.shoeList != null ? viewModel.shoeList.get(0).name : @string/description_text}"
+                android:textColor="@color/colorAccent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -56,6 +59,4 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-
 </layout>

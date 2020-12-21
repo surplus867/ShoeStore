@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="viewModel.ShareViewModel"/>
+            type="com.udacity.shoestore.ShareViewModel"/>
 
 
     </data>

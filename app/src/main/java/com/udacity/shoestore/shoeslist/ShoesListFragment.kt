@@ -8,11 +8,12 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
-import viewModel.ShareViewModel
+import com.udacity.shoestore.ShareViewModel
 
 class ShoesListFragment : Fragment() {
 
@@ -26,8 +27,8 @@ class ShoesListFragment : Fragment() {
         // Observing the showToast event, call in the textClick function
         viewModel.showToast.observe(this, Observer { message ->
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
-
         })
+
         // Observing the navigate event, call in the textClick function
         viewModel.shoeDetailNavigate.observe(this, Observer {
             findNavController().navigate(R.id.action_shoelist_destination_to_shoeDetailFragment)
@@ -44,6 +45,7 @@ class ShoesListFragment : Fragment() {
         val binding: FragmentShoeListBinding=
             DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_list, container, false)
         binding.viewModel = viewModel
+        //binding.shoesListViewModel = shoesListViewModel
         return binding.root
     }
 
