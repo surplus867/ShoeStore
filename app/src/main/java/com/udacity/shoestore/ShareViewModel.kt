@@ -66,16 +66,17 @@ class ShareViewModel : ViewModel() {
 
     fun showShoeList() {
         // TODO grab shoeList and display the text either in text view or a recylcerview, *shoeRow
-        var exampleText = ""
+        var shoeRow = ""
         shoeList.get()?.forEach {
             // You need to iterate through the list with a for loop, you need to add the previous text to the new text and
             // have a return carriage (/n) at the end of each line so that it put each shoe on a new line.
             // Append the shoes items together. Append a string to string and return carriage at the end.
-            exampleText += "Shoe name ${it.name} Company: ${it.company} /n"
+            shoeRow += "Shoe name ${it.name} Company: ${it.company} /n" +
+                    "Shoe size ${it.size} Description: ${it.description}"
         }
 
         // sets the text to the list of shoes
-        shoes.set(exampleText)
+        shoes.set(shoeRow)
 
         //toastItem.value = shoeList.get()?.first()?.name.orEmpty()
     }
