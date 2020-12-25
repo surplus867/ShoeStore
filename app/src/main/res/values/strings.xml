@@ -20,10 +20,11 @@
     <string name="shoe_size_text">Shoe Size Text</string>
     <string name="shoe_size_hint">Shoe Size Hint</string>
     <string name="shoe_name_text">Shoe Name Text</string>
-    <string name="description_text">Description Text</string>
+    <string name="description_text">Description \nText</string>
     <string name="description_hint">Description Hint</string>
     <string name="cancel_button_text">Cancel Button Text</string>
     <string name="cancel_button">Cancel Button</string>
     <string name="save_button">Save Button</string>
     <string name="shoe_list">Shoe List</string>
+    <string name="logout_menu">Logout Menu</string>
 </resources>

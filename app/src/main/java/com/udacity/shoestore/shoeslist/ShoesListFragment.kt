@@ -8,9 +8,9 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.udacity.shoestore.EventObserver
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.ShareViewModel
@@ -25,12 +25,12 @@ class ShoesListFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Observing the showToast event, call in the textClick function
-        viewModel.showToast.observe(this, Observer { message ->
+        viewModel.toastEvent.observe(this, EventObserver { message ->
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
         })
 
         // Observing the navigate event, call in the textClick function
-        viewModel.shoeDetailNavigate.observe(this, Observer {
+        viewModel.shoeDetailNavigationEvent.observe(this, EventObserver {
             findNavController().navigate(R.id.action_shoelist_destination_to_shoeDetailFragment)
         })
 

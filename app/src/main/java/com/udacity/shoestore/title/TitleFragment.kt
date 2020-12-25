@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.udacity.shoestore.EventObserver
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentTitleBinding
 import com.udacity.shoestore.ShareViewModel
@@ -27,11 +28,11 @@ class TitleFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Observing the showToast event, call in the textClick function
-        viewModel.showToast.observe(this, Observer { message ->
+        viewModel.toastEvent.observe(this, EventObserver { message ->
             Toast.makeText(context, message , Toast.LENGTH_SHORT).show()
         })
         // Observing the navigate event, call in the textClick function
-        viewModel.welcomeNavigate.observe(this, Observer {
+        viewModel.welcomeNavigationEvent.observe(this, EventObserver{
             findNavController().navigate(R.id.action_titleFragment_to_welcomeFragment)
         })
 

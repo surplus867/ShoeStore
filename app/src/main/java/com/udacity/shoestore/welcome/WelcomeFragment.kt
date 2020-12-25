@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.udacity.shoestore.EventObserver
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentWelcomeBinding
 import com.udacity.shoestore.ShareViewModel
@@ -23,7 +24,7 @@ class WelcomeFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         // Observing the navigate event, call in the textClick function
-        viewModel.instructionNavigate.observe(this, Observer {
+        viewModel.instructionNavigationEvent.observe(this, EventObserver {
             findNavController().navigate(R.id.action_welcomeFragment_to_instructionFragment)
         })
 
