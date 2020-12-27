@@ -40,7 +40,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="0dp"
             android:text="@{viewModel.shoeList != null ? viewModel.shoes : @string/description_text}"
             android:textColor="@color/colorAccent"
             android:maxLines="100"

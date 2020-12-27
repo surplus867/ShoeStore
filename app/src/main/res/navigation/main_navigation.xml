@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/title_destination"
         android:name="com.udacity.shoestore.title.TitleFragment"
-        android:label="fragment_title"
-        tools:layout="@layout/fragment_title" >
+        android:label="Log in"
+        tools:layout="@layout/fragment_title">
         <action
             android:id="@+id/action_titleFragment_to_welcomeFragment"
             app:destination="@id/welcome_destination"
@@ -22,7 +22,7 @@
     <fragment
         android:id="@+id/welcome_destination"
         android:name="com.udacity.shoestore.welcome.WelcomeFragment"
-        android:label="fragment_welcome"
+        android:label="Welcome"
         tools:layout="@layout/fragment_welcome">
         <action
             android:id="@+id/action_welcomeFragment_to_instructionFragment"
@@ -35,8 +35,8 @@
     <fragment
         android:id="@+id/instruction_destination"
         android:name="com.udacity.shoestore.instruction.InstructionFragment"
-        android:label="fragment_instruction"
-        tools:layout="@layout/fragment_instruction" >
+        android:label="Instruction"
+        tools:layout="@layout/fragment_instruction">
         <action
             android:id="@+id/action_instruction_destination_to_shoesListFragment"
             app:destination="@id/shoelist_destination"
@@ -48,7 +48,7 @@
     <fragment
         android:id="@+id/shoelist_destination"
         android:name="com.udacity.shoestore.shoeslist.ShoesListFragment"
-        android:label="fragment_shoe_list"
+        android:label="Shoe List"
         tools:layout="@layout/fragment_shoe_list">
         <action
             android:id="@+id/action_shoelist_destination_to_shoeDetailFragment"
@@ -66,6 +66,6 @@
     <fragment
         android:id="@+id/shoedetails_destination"
         android:name="com.udacity.shoestore.ShoesDetailFragment"
-        android:label="fragment_shoe_details"
+        android:label="Shoe Details"
         tools:layout="@layout/fragment_shoe_detail"></fragment>
 </navigation>
